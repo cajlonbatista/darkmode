@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.flaticon.com/svg/static/icons/svg/733/733577.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Francisco Cajlon</title>
+</head>
+
+<body>
+    <form class="send">
+        <span>Francisco Cajlon</span>
+        <input type="text" required placeholder="Digite seu nome" style="width: 95%;">
+        <input type="email" required placeholder="Digite seu email" style="width: 95%;">
+        <textarea required placeholder="Mensagem" style="width: 95%; height: 100px; resize: none;"></textarea>
+        <button>Enviar</button>
+    </form>
+    <div id="darkmode" class="switch" onchange="changeColor(event)">
+        <label class="container">
+            <input type="checkbox" checked>
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <script>
+        var value = true;
+        function changeColor(e) {
+            if (value == false) {
+                value = true;
+                document.documentElement.style.setProperty('--color-back', '#202020')
+                document.documentElement.style.setProperty('--color-send', '#303030');
+                document.documentElement.style.setProperty('--color-input', '#464649');
+                document.documentElement.style.setProperty('--color-text', '#efeff1');
+                document.documentElement.style.setProperty('--color-button', '#464649');
+                document.documentElement.style.setProperty('--color-input-focus', '#101010');
+            } else if (value == true) {
+                value = false;
+                console.log(value);
+                document.documentElement.style.setProperty('--color-back', 'white')
+                document.documentElement.style.setProperty('--color-send', '#F5F5F5');
+                document.documentElement.style.setProperty('--color-input', '#E3E5E8');
+                document.documentElement.style.setProperty('--color-text', '#202020');
+                document.documentElement.style.setProperty('--color-button', 'var(--color-main)');
+                document.documentElement.style.setProperty('--color-input-focus', '#E3E5E8');
+            }
+        }
+    </script>
+</body>
+
+</html>
